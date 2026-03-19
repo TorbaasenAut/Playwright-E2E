@@ -1,0 +1,37 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "[![npm version](https://img.shields.io/npm/v/playwright.svg)](https://www.npmjs.com/package/playwright) <!-- GEN:chromium-version-badge -->[![Chromium version](https://img.shields.io/badge/chromium-141.0.7390.37-blue.svg?logo=google-chrome)](https://www.chromium.org/Home)<!-- GEN:stop --> <!-- GEN:firefox-version-badge -->[![Firefox version](https://img.shields.io/badge/firefox-142.0.1-blue.svg?logo=firefoxbrowser)](https://www.mozilla.org/en-US/firefox/new/)<!-- GEN:stop --> <!-- GEN:webkit-version-badge -->[![WebKit version](https://img.shields.io/badge/webkit-26.0-blue.svg?logo=safari)](https://webkit.org/)<!-- GEN:stop --> [![Join Discord](https://img.shields.io/badge/join-discord-informational)](https://aka.ms/playwright/discord)",
+  "main": "index.js",
+  "scripts": {
+    "demo:global": "npx playwright test tests/demo/login.spec.ts",
+   "demo:allure": "npx playwright test tests/functional/execallure.spec.ts --headed",
+    "demo:hooks": "npx playwright test tests/functional/hooks.demo.spec.ts --headed",
+    "demo:tag": "npx playwright test --grep @smoke --headed",
+    "pw-basic-cap": "set DEBUG=pw:api && npx playwright test tests/functional/pw.basic.cap.make.aptmnt.spec.ts --headed",
+    "demo": "npx playwright test tests/demo/mytest.spec.ts --headed",
+    "login": "npx playwright test tests/demo/login.spec.ts --headed",
+    "make-apt": "npx playwright test tests/functional/make.aptmnt1.spec.ts --headed",
+    "param-make-apt": "npx playwright test tests/functional/params.make.aptmnt1.spec.ts --headed",
+    "eie_handling": "npx playwright test tests/functional/eie_handling_make_aptmnt.spec.ts --headed"
+  },
+  "keywords": [
+    "playwright",
+    "playwright-e2-tests",
+    "playwright-mcp"
+  ],
+  "author": "Cope Automation",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^24.11.1",
+    "allure-playwright": "^3.4.5",
+    "dotenv": "^17.3.1"
+  },
+  "dependencies": {
+    "playwright": "^1.57.0",
+    "playwright-core": "^1.57.0",
+    "undici-types": "^7.16.0"
+  }
+}
