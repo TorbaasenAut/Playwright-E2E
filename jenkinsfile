@@ -24,8 +24,8 @@ pipeline{
         stage('Test') {
             steps {
                 sh '''
-                    export TEST_USERNAME=$"TEST_CREDENTIALS_USR"
-                    export TEST_PASSWORD=$"TEST_CREDENTIALS_PSW"
+                    export TEST_USERNAME=$TEST_CREDENTIALS_USR
+                    export TEST_PASSWORD=$TEST_CREDENTIALS_PSW
                     npm run make-apt
                 '''
             }
@@ -41,5 +41,6 @@ pipeline{
         }
              
     }
+    
 
 }
