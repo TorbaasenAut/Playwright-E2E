@@ -30,7 +30,9 @@ pipeline{
                 '''
             }
         } 
-        post{
+              
+    }
+    post{
             always {
                 //Publish allure report by the test result
                 allure includeProperties: false,
@@ -39,6 +41,5 @@ pipeline{
                  reportBuildPolicy: 'ALWAYS',
             }
         }
-             
-    }    
+    
 }
